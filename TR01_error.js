@@ -1,45 +1,52 @@
 // Espera a que toT elcontigut de l’HTML s’hagi carregat
 document.addEventListener('DOMContentLoaded', () => {
-// Seleccionam el botó pel seu ID
+
 const boto = document.getElementById('boto');
-const missatge = document.getElementById('missatge');
-// Asignam la funció que s’executara al pulsar el botó
+    const boto2 = document.getElementById('boto2');
+    const missatge = document.getElementById('missatge');
+
+
+
 boto.addEventListener('click', () => {
-missatge.textContent = '¡El archivo script.js se ha ejecutado correctamente!';
-missatge.style.color = 'green';
+        error1();
+    });
 
-
-// Aquí poses el codi que vulguis executar
-function error1 () :
-
-function error2 () :
+    boto2.addEventListener('click', () => {
+        error2();
+    });
 
 console.log('Botón pulsado y script ejecutado.');
 });
 });
-function error1 () {
-try {
-    throw new Error("error intencional");
-} catch (error) {
-    console.error("Error del codi:", error);
+function error1() {
+        try {
+            throw new Error("Error intencional");
 
-    alert("se produjo un error, intentalo mas tarde");
-}
-}
-function error2 () {
-try {
-    let opcions = ["Inicio", "Configuración", "Sortir"];
-    let seleccio = "Eliminar";
+        } catch (error) {
+            console.error("Error del código:", error);
 
-    if (!opcions.includes(seleccio)) {
-        throw new Error("La opcion selecionado no existe");
+            alert("Se ha producido un error, inténtalo más tarde.");
+        }
+    }
+function error2() {
+        try {
+            let opciones = ["Inicio", "Configuración", "Salir"];
+
+            let seleccion = document.getElementById('opcion').value;
+
+            if (!opciones.includes(seleccion)) {
+                throw new Error("La opción seleccionada no existe");
+            }
+
+            missatge.textContent = "Opción correcta.";
+            missatge.style.color = "green";
+
+        } catch (error) {
+            console.error("Error de opción:", error.message);
+
+            alert("Opción incorrecta, selecciona otra opción.");
+        }
     }
 
-} 
-catch (error) {
-    console.error("Error de opcion:", error.message);
-
-    alert("Opcion incorrecta. seleciona otra opcion.");
-}
 }
 
