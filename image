@@ -18,7 +18,8 @@ try {
         throw new Error("La opcion selecionado no existe");
     }
 
-} catch (error) {
+} 
+catch (error) {
     console.error("Error de opcion:", error.message);
 
     alert("Opcion incorrecta. seleciona otra opcion.");
