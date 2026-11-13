@@ -10,6 +10,13 @@ missatge.style.color = 'green';
 
 
 // Aquí poses el codi que vulguis executar
+function error1 () :
+
+function error2 () :
+
+console.log('Botón pulsado y script ejecutado.');
+});
+});
 function error1 () {
 try {
     throw new Error("error intencional");
@@ -36,8 +43,3 @@ catch (error) {
 }
 }
 
-
-
-console.log('Botón pulsado y script ejecutado.');
-});
-});
